@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main() {
+	//To print a string in c
+	char name[100];
+	//In order to input we write
+	//fgets(variable name,size,stdin);
+	
+	fgets(name,100,stdin);
+	puts(name);
+	return 0;
+}
