@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+void Assalamoalikum();
+void Bonjour();
+void NA();
+
+int main() {
+	char ch;
+	printf("Enter P for Pakistani and F for French\n");
+	scanf("%c",&ch);
+	if(ch=='p'){
+		Assalamoalikum();
+	} else if(ch=='f'){
+		Bonjour();
+	} else{
+		NA();
+	}
+	return 0;
+}
+void Assalamoalikum() {
+	printf("Assamoalikum\n");
+}
+void Bonjour() {
+	printf("Bonjour\n");
+}
+void NA() {
+	printf("N/A");
+}
