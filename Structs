@@ -1,0 +1,30 @@
+#include<stdio.h>
+typedef struct {
+	int x;
+	int y;
+} Point;
+int main() {
+	Point p1,p2;
+//	p1.x=3;
+//	p1.y=5;
+//	p2.x=8;
+//	p2.y=10;
+    printf ("Enter p1.x");
+    scanf("%d",&p1.x);
+    
+    printf ("Enter p1.y");
+    scanf("%d",&p1.y);
+    
+    printf ("Enter p2.x");
+    scanf("%d",&p2.x);
+    
+    printf ("Enter p2.y");
+    scanf("%d",&p2.y);
+    
+    printf("\n");
+
+	printf("p1 at x is : %d\np1 at y is : %d\np2 at x is : %d\np2 at y is : %d",p1.x,p1.y,p2.x,p2.y);
+	
+	
+	return 0;
+}
