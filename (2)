@@ -1,0 +1,36 @@
+/*write a function to calculate the area of a square,circle and rectangle*/
+#include<stdio.h>
+int areaofsquare(int side);
+float areaofcircle(float rad);
+int areaofrectangle(int a,int b);
+
+int main() {
+	int side,a,b;
+	float rad;
+	
+	printf("Enter a side :");
+	scanf("%d",&side);
+	printf("The area of square is: %d\n",areaofsquare( side));
+	
+	printf("Enter radius: ");
+	scanf("%f",&rad);
+	printf("The area of circle is %.2f\n",areaofcircle(rad));
+	
+	printf("Enter a: ");
+	scanf("%d",&a);
+	printf("Enter b: ");
+	scanf("%d",&b);
+	
+	printf("The area of rectangle is: %d\n",areaofrectangle(a,b));
+	
+	return 0;
+}
+int areaofsquare(int side) {
+	return side*side;
+}
+float areaofcircle(float rad) {
+	return 3.142*(rad*rad);
+}	
+int areaofrectangle(int a,int b) {
+	return a*b;
+}
