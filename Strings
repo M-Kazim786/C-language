@@ -9,3 +9,52 @@ int main() {
 	puts(name);
 	return 0;
 }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+//strlen function
+#include<stdio.h>
+#include<strings.h>
+int main () {
+	char fname[100]="Muhammad";
+	char lname[100]="Kazim";
+	int flength= strlen(fname);
+	int llength= strlen(lname);
+	
+	printf("The length of fname is %d \n",flength);
+	printf("The length of lname is %d \n",llength);
+	
+	return 0;
+}
+
+/*strcat function 
+(This function concatenates two strings)*/
+
+#include<stdio.h>
+#include<strings.h>
+int main () {
+	char fname[100]="Muhammad ";
+	char lname[100]="Kazim";
+	char fullname[100];
+	
+	strcat(fname,lname);
+	puts(fname);
+	return 0;
+} 
+
+/*strcpy function 
+(This function copy on e string into another)*/
+
+#include<stdio.h>
+#include<strings.h>
+int main () {
+	char fname[100]="Muhammad ";
+	char lname[100]="Kazim";
+	char fullname[100];
+	
+	strcat(fname,lname);
+	strcpy(fullname,fname);
+	puts(fullname);
+	
+	return 0;
+}
