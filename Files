@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main() {
+	FILE *fptr;
+	char ch[2000];
+	fptr=fopen("milokazi.txt","r");
+	
+	if(fptr==NULL) {
+		printf("Error opening files");
+		return 1;
+	}
+	printf("original file :");
+	while(fgets(ch,2000,fptr)!=NULL) {
+		printf("%s\n",ch);
+	}
+	fclose(fptr);
+	return 0;
+}
