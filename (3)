@@ -1,0 +1,18 @@
+#include<stdio.h>
+void airthematic(int a,int b,int *sum,int *product,float *ave);
+int main() {
+	int a=5;
+	int b=8;
+    int sum,product;
+    float ave;
+    airthematic(a,b,&sum,&product,&ave);
+    printf("sum is %d\nproduct is %d\nave is %f\n",sum,product,ave);
+	
+	
+	return 0;
+}
+void airthematic(int a, int b,int *sum,int *product,float *ave) {
+    *sum=a+b;
+    *product=a*b;
+    *ave=(a+b)/2.0;
+}
