@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<string.h>
+typedef struct{
+	char name[50];
+	int id;
+	float gpa;
+	
+} studentinfo;
+int main () {
+	studentinfo stdu[3];
+	
+//	strcpy(stdu[0].name,"Muhammad Kazim");
+//	stdu[0].id= 6;
+//	stdu[0].gpa=3.0;
+	
+//	strcpy(stdu[1].name,"Asjal amir");
+//	stdu[1].id=7;
+//	stdu[1].gpa=3.5;
+	
+//	strcpy(stdu[2].name,"Milo Baby");
+//	stdu[2].id=8;
+//	stdu[2].gpa=3.6;
+
+    printf("Enter name :");
+    fgets(stdu[0].name,50,stdin);
+    printf("Enter id :");
+    scanf("%d",&stdu[0].id);
+    printf("Enter gpa");
+    scanf("%f",&stdu[0].gpa);
+    getchar();
+    
+    printf("Enter name :");
+    fgets(stdu[1].name,50,stdin);
+    printf("Enter id :");
+    scanf("%d",&stdu[1].id);
+    printf("Enter gpa");
+    scanf("%f",&stdu[1].gpa);
+    getchar();
+    
+    printf("Enter name :");
+    fgets(stdu[2].name,50,stdin);
+    printf("Enter id :");
+    scanf("%d",&stdu[2].id);
+    printf("Enter gpa");
+    scanf("%f",&stdu[2].gpa);
+    getchar();
+    
+    printf("\n");
+	
+	
+    for(int i=0;i<3;i++){
+    	printf("Name : %s\nstudent id : %d\nstudent gpa : %f\n",stdu[i].name,stdu[i].id,stdu[i].gpa);
+	}
+	
+	
+	return 0;
+}
