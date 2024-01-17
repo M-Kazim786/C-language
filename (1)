@@ -1,0 +1,39 @@
+/**************ftell()*******************/
+
+#include<stdio.h>
+int main() {
+	FILE *fptr;
+	long position;
+	
+	fptr=fopen("test.txt","w");
+	if(fptr==NULL) {
+		printf("error");
+		return 1;
+	}
+	fprintf(fptr,"kal ics ka paper hai:(");
+	//Read ad print the current position
+	position=ftell(fptr);
+	printf("Current position %ld ",position);
+	
+	fclose(fptr);
+	
+return 0;	
+}
+/*******************fseek()*************/
+#include<stdio.h>
+int main() {
+    FILE *fptr;
+    long position;
+    fptr=fopen("test.txt","r");
+    if(fptr==NULL) {
+    	printf("Error");
+    	
+    	fseek(fptr,-1,SEEK_END);
+    	position=ftell(fptr);
+    	fseek(fptr,-1,SEEK_END);
+    	printf("Current position is %ld ",position);
+		}
+		fclose(fptr);
+	return 0;
+	
+}
