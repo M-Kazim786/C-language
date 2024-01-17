@@ -1,0 +1,25 @@
+/*#include<stdio.h>
+int main() {
+	int age=19;
+	int *ptr=&age;
+	int **pptr=&ptr;
+	
+	printf("%d\n",age);
+	printf("%u\n",*ptr);
+	printf("%u\n",**pptr);
+	return 0;
+} */
+
+//print the value of i from its pointer to pointer
+#include<stdio.h>
+int main() { 
+	int i;
+	int *ptr= &i;
+	int **pptr=&ptr;
+	
+	printf("Enter value of i :");
+	scanf("%d",&i);
+
+	printf("%u",**pptr);	
+	return 0;
+}
