@@ -1,0 +1,24 @@
+#include<stdio.h>
+void square(int a);
+void _square(int *a);
+int main() {
+	int num=5;
+	printf("Call by value :\n");
+	square(num);
+	printf("%d\n",num);
+	
+	printf("call by reference :\n");
+	_square(&num);
+	printf("%d\n",num);
+	return 0;
+} 
+//call by value
+void square(int a) {
+	a=a*a;
+	printf("%d\n",a);
+}
+//call by reference
+void _square(int *a) {
+	*a= (*a)*(*a);
+	printf("%d\n",*a);
+}
