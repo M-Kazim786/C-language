@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<string.h>
+typedef struct{
+	int dd;
+	int mm;
+	int yy;
+} date;
+
+typedef struct {
+	char name[50];
+	char capital[50];
+	int pop;
+	date doi;
+}countryinfo;
+
+int main() {
+	char name[50];
+	countryinfo pak,ind;
+	pak.doi.dd=14;
+	pak.doi.mm=8;
+	pak.doi.yy=1947;
+	
+	ind.doi.dd=15;
+	ind.doi.mm=8;
+	ind.doi.yy=1947;
+	
+	pak.pop=242715947;
+	ind.pop=1434840524;
+	
+	strcpy(pak.capital,"Islamabad");
+	strcpy(ind.capital,"Mumbai");
+	
+	printf("Enter country name : ");
+	scanf("%s",name);	
+	if(strcmp(name,"pak")==0 || strcmp(name,"pakistan")==0){
+		printf("DOI : %d-%d-%d\nCapital : %s \nPopulation is : %d\n",pak.doi.dd ,pak.doi.mm, pak.doi.yy,pak.capital,pak.pop);
+		
+	}
+	else if(strcmp(name,"ind")==0 || strcmp(name,"india")==0){
+		printf("DOI : %d-%d-%d\nCapital : %s \nPopulation is : %d\n",ind.doi.dd, ind.doi.mm ,ind.doi.yy,ind.capital,ind.pop);
+	}
+	else{
+		printf("N/A");
+	}
+	
+	return 0;
+}
