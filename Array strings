@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main() {
+	char cars[][100]={"Supra","Mustang","Hellcat"};
+	int size=sizeof(cars)/sizeof(cars[0]);
+	
+	for(int i=0;i<size;i++){
+		printf("%s",cars[i]);
+	}
+	return 0;
+	
+}
