@@ -1,0 +1,36 @@
+#include<stdio.h>
+int maxarr(int arr[],int size);
+int minarr(int arr[],int size);
+int main() {
+	int arr[]={5,7,3,9,17,33,2,1};
+	int size=sizeof arr/sizeof arr[0];
+	
+	printf("The max number is %d\n",maxarr(arr,size));
+	printf("The min number is %d\n",minarr(arr,size));
+
+	return 0;
+}
+int maxarr(int arr[], int size){
+	int max=arr[0];
+	int index=0;
+	for(int i=0;i<size;i++){
+		if(arr[i]>max){
+			max=arr[i];
+			index=i;
+			}
+		}
+	printf("The max index is %d ",index);
+	return max;
+}
+int minarr(int arr[],int size) {
+	int min=arr[0];
+	int index=0;
+	for(int i=0;i<size;i++){
+	if(arr[i]<min){
+		min=arr[i];
+		index=i;
+	}
+	}
+	printf("The min index is %d ",index);
+	return min;
+}
