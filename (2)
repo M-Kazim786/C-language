@@ -1,0 +1,21 @@
+//write a program to swap two number using functions and pointers
+#include<stdio.h>
+void swap(int *a,int *b);
+int main() {
+	int a=4;
+	int b=10;
+	
+	printf("Before swap \na=%d, b= %d\n",a,b);
+	printf("\n");
+	swap(&a,&b);
+	printf("\n");
+	printf("After swap \na=%d, b= %d",a,b);
+	
+	return 0;
+}
+void swap(int *a,int *b) {
+	int temp=*a;
+	*a=*b;
+	*b=temp;
+	printf("Address: \na=%u, b= %u\n",a ,b);
+} 
